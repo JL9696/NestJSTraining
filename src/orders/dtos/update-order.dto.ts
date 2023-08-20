@@ -9,6 +9,11 @@ export class UpdateOrderDTO {
   productId: string;
 
   @IsNotEmpty()
+  @IsUUID()
+  @IsString()
+  clientId: string;
+
+  @IsNotEmpty()
   @IsString()
   @Length(5, 30)
   client: string;
